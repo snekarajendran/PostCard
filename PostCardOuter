@@ -1,0 +1,35 @@
+    <div class="header">
+      </div>
+      
+      <div class="navbar">
+        <a href="#" >Timeline</a>
+        <a href="#" >About</a>
+        <a href="#" >Friends</a>
+        <a href="#" class="image"></a>
+        <a href="#" class="right">...</a>
+        <a href="#" class="right">Videos</a>
+        <a href="#" class="right">Photos</a>
+   </div>
+   <div><br></div>
+   <div><br></div>
+<div class="main">
+    <div class="column">
+    <div class="about">
+            <div class="pi"><p>Profile intro</p></div>
+        <div>About me:</div>
+
+    </div>   
+    </div>
+    <div class="column">
+            <div class="post-otr" *ngFor="let postCards of post">
+                   {{ postCards.name+""+postCards.time}}
+                    {{postCards.content}}
+{{postCards.likeCount+""+postCards.limage+""+postCards.commentCount}}    
+        <app-postCardHeader [names]="postCards"></app-postCardHeader>
+    <app-postCardContent></app-postCardContent>
+    <app-postCardFooter></app-postCardFooter>
+        </div>
+       
+    </div>
+            
+      
